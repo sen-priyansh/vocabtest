@@ -11,7 +11,7 @@
 
 'use client';
 
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState, Suspense, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/Header';
@@ -27,6 +27,19 @@ function ResultContent() {
   const difficulty = searchParams.get('difficulty') || 'all';
   const [showDetailed, setShowDetailed] = useState(false);
   const [saving, setSaving] = useState(false);
+  const hasSavedRef = useRef(false);
+
+  // Create a unique test identifier
+  const testId = testState ? `${testState.startTime}-${testState.selectedWords.length}-${testState.score}` : null;
+
+  // Reset save flag when testState changes (new test)
+  useEffect(() => {
+    hasSavedRef.current = false;
+    // Also clear any previous save record for this test
+    if (testId) {
+      localStorage.removeItem(`test_saved_${testId}`);
+    }
+  }, [testState?.startTime, testId]); // Use startTime as unique identifier for each test
 
   useEffect(() => {
     // If no test state, redirect to home
@@ -35,22 +48,44 @@ function ResultContent() {
       return;
     }
 
-    // Save test result to Supabase if user is logged in
+    // Check if this specific test has already been saved
+    const alreadySaved = testId ? localStorage.getItem(`test_saved_${testId}`) === 'true' : false;
+
+    // Save test result to Supabase if user is logged in and not already saved
     const saveResult = async () => {
-      if (user && testState && !saving) {
+      if (user && testState && !hasSavedRef.current && !alreadySaved) {
+        hasSavedRef.current = true; // Mark as saved immediately to prevent multiple calls
         setSaving(true);
         try {
           await saveTestResult(testState, difficulty);
+          // Mark this specific test as saved in localStorage
+          if (testId) {
+            localStorage.setItem(`test_saved_${testId}`, 'true');
+          }
+          console.log('Test result saved successfully for test:', testId);
+          
+          // Clear test state after a short delay to prevent persistence issues
+          // This allows the user to view results but ensures clean state for next test
+          setTimeout(() => {
+            resetTest();
+          }, 2000); // 2 second delay
         } catch (error) {
           console.error('Error saving test result:', error);
+          hasSavedRef.current = false; // Reset on error so it can be retried
+          // Remove localStorage entry on error so it can be retried
+          if (testId) {
+            localStorage.removeItem(`test_saved_${testId}`);
+          }
         } finally {
           setSaving(false);
         }
+      } else if (alreadySaved) {
+        console.log('Test result already saved for test:', testId);
       }
     };
 
     saveResult();
-  }, [testState, user, difficulty, saveTestResult, saving]);
+  }, [testState, user, difficulty, testId]); // Added testId to dependencies
 
   if (!testState) {
     return (

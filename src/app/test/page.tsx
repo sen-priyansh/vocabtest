@@ -40,7 +40,8 @@ function TestContent() {
     initializeTest, 
     recordAnswer, 
     nextQuestion, 
-    updateTestState 
+    updateTestState,
+    resetTest 
   } = useTestState();
 
   // Load words and initialize test
@@ -51,11 +52,22 @@ function TestContent() {
         const allWords: Word[] = await response.json();
         setWords(allWords);
 
-        // If no test state exists, initialize new test
-        if (!testState) {
+        // Check if existing test is completed (user is at the last question or beyond)
+        const isTestCompleted = testState && testState.currentQuestionIndex >= testState.selectedWords.length;
+        
+        // If user navigated here with a difficulty parameter, they want to start a new test
+        // OR if the existing test is completed, clear and start fresh
+        if ((testState && difficulty) || isTestCompleted) {
+          resetTest();
+          // After reset, initialize new test
+          const selectedWords = selectRandomWords(allWords, 20, difficulty);
+          initializeTest(selectedWords);
+        } else if (!testState) {
+          // No existing test, create new one
           const selectedWords = selectRandomWords(allWords, 20, difficulty);
           initializeTest(selectedWords);
         }
+        
         setLoading(false);
       } catch (error) {
         console.error('Error loading words:', error);
@@ -64,7 +76,7 @@ function TestContent() {
     };
 
     loadWords();
-  }, []);
+  }, [difficulty]); // Added difficulty to dependencies so it resets when user changes difficulty
 
   // Generate options when current word changes
   useEffect(() => {

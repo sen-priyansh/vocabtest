@@ -48,6 +48,9 @@ export function useTestResults() {
       // Update user statistics
       await updateUserStats(testState);
 
+      // Clean up old tests to keep only last 20
+      await cleanupOldTests();
+
       return testResult;
     } catch (error) {
       console.error('Error in saveTestResult:', error);
@@ -156,10 +159,128 @@ export function useTestResults() {
     }
   };
 
+  const deleteAllTestHistory = async () => {
+    if (!user) return false;
+
+    try {
+      console.log('Starting delete all test history for user:', user.id);
+      
+      // Delete all test results for the user
+      const { error: deleteError } = await supabase
+        .from('test_results')
+        .delete()
+        .eq('user_id', user.id);
+
+      if (deleteError) {
+        console.error('Error deleting test history:', deleteError);
+        return false;
+      }
+
+      console.log('Successfully deleted test results, now resetting stats...');
+
+      // Reset user statistics
+      const { data: existingStats } = await supabase
+        .from('user_stats')
+        .select('*')
+        .eq('user_id', user.id)
+        .single();
+
+      if (existingStats) {
+        // Update existing stats to zero
+        const { error: statsError } = await supabase
+          .from('user_stats')
+          .update({
+            total_tests: 0,
+            total_questions: 0,
+            correct_answers: 0,
+            accuracy_percentage: 0,
+            average_score: 0,
+            best_score: 0,
+            updated_at: new Date().toISOString()
+          })
+          .eq('user_id', user.id);
+
+        if (statsError) {
+          console.error('Error resetting user stats:', statsError);
+          return false;
+        }
+      } else {
+        // Create new stats record
+        const { error: statsError } = await supabase
+          .from('user_stats')
+          .insert({
+            user_id: user.id,
+            total_tests: 0,
+            total_questions: 0,
+            correct_answers: 0,
+            accuracy_percentage: 0,
+            average_score: 0,
+            best_score: 0,
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString()
+          });
+
+        if (statsError) {
+          console.error('Error creating user stats:', statsError);
+          return false;
+        }
+      }
+
+      console.log('Successfully reset user statistics');
+      return true;
+    } catch (error) {
+      console.error('Error in deleteAllTestHistory:', error);
+      return false;
+    }
+  };
+
+  const cleanupOldTests = async () => {
+    if (!user) return false;
+
+    try {
+      // Get all tests for the user, ordered by creation date (newest first)
+      const { data: allTests, error: fetchError } = await supabase
+        .from('test_results')
+        .select('id, created_at')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false });
+
+      if (fetchError) {
+        console.error('Error fetching tests for cleanup:', fetchError);
+        return false;
+      }
+
+      // If user has more than 20 tests, delete the oldest ones
+      if (allTests && allTests.length > 20) {
+        const testsToDelete = allTests.slice(20); // Keep first 20, delete the rest
+        const idsToDelete = testsToDelete.map(test => test.id);
+
+        const { error: deleteError } = await supabase
+          .from('test_results')
+          .delete()
+          .in('id', idsToDelete);
+
+        if (deleteError) {
+          console.error('Error cleaning up old tests:', deleteError);
+          return false;
+        }
+
+        console.log(`Cleaned up ${idsToDelete.length} old tests`);
+      }
+
+      return true;
+    } catch (error) {
+      console.error('Error in cleanupOldTests:', error);
+      return false;
+    }
+  };
+
   return {
     saveTestResult,
     updateUserStats,
     getUserStats,
-    getUserTestHistory
+    getUserTestHistory,
+    deleteAllTestHistory,
+    cleanupOldTests
   };
 }
