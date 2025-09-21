@@ -13,23 +13,26 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Header from "@/components/Header";
 
 export default function Home() {
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
-      <div className="container mx-auto px-4 py-8 max-w-md">
-        <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 text-center">
-          {/* Header */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              📚 VocabTest
-            </h1>
-            <p className="text-gray-600 dark:text-gray-300 text-lg">
-              Test your vocabulary with challenging English words
-            </p>
-          </div>
+    <>
+      <Header />
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
+        <div className="container mx-auto px-4 py-8 max-w-md">
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 text-center">
+            {/* Header */}
+            <div className="mb-8">
+              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                📚 VocabTest
+              </h1>
+              <p className="text-gray-600 dark:text-gray-300 text-lg">
+                Test your vocabulary with challenging English words
+              </p>
+            </div>
 
           {/* Difficulty Selection */}
           <div className="mb-8">
@@ -73,9 +76,13 @@ export default function Home() {
             <p>📝 20 questions per test</p>
             <p>🎯 Multiple choice format</p>
             <p>💾 Progress saved automatically</p>
+            <p className="mt-3 text-blue-600 dark:text-blue-400 font-medium">
+              💡 Sign up to track your progress and view detailed statistics!
+            </p>
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

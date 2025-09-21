@@ -11,9 +11,10 @@
 
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import Header from '@/components/Header';
 import { 
   useTestState, 
   selectRandomWords, 
@@ -21,7 +22,7 @@ import {
   Word 
 } from '../hooks/useVocabTest';
 
-export default function TestPage() {
+function TestContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const difficulty = searchParams.get('difficulty') || 'all';
@@ -141,12 +142,14 @@ export default function TestPage() {
   const isLastQuestion = testState.currentQuestionIndex >= testState.selectedWords.length - 1;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
-      <div className="container mx-auto px-4 py-8 max-w-2xl">
-        {/* Header */}
-        <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 mb-6">
-          <div className="flex justify-between items-center mb-4">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">VocabTest</h1>
+    <>
+      <Header />
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
+        <div className="container mx-auto px-4 py-8 max-w-2xl">
+          {/* Header */}
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 mb-6">
+            <div className="flex justify-between items-center mb-4">
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">VocabTest</h1>
             <Link 
               href="/"
               className="text-indigo-600 hover:text-indigo-800 font-medium"
@@ -233,7 +236,7 @@ export default function TestPage() {
               {showExample && (
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
                   <p className="text-gray-700 dark:text-gray-300 italic">
-                    "{currentWord.example}"
+                    &ldquo;{currentWord.example}&rdquo;
                   </p>
                 </div>
               )}
@@ -253,6 +256,25 @@ export default function TestPage() {
           )}
         </div>
       </div>
-    </div>
+      </div>
+    </>
+  );
+}
+
+export default function TestPage() {
+  return (
+    <Suspense fallback={
+      <>
+        <Header />
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900 flex items-center justify-center">
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+            <p className="text-gray-600 dark:text-gray-300 mt-4">Loading test...</p>
+          </div>
+        </div>
+      </>
+    }>
+      <TestContent />
+    </Suspense>
   );
 }

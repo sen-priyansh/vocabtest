@@ -9,7 +9,7 @@
  * Commercial use is prohibited without explicit permission from the copyright holder.
  */
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export interface Word {
   word: string;

@@ -11,20 +11,46 @@
 
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import Header from '@/components/Header';
 import { useTestState } from '../hooks/useVocabTest';
+import { useTestResults } from '../hooks/useTestResults';
+import { useAuth } from '@/contexts/AuthContext';
 
-export default function ResultPage() {
+function ResultContent() {
   const { testState, resetTest } = useTestState();
+  const { saveTestResult } = useTestResults();
+  const { user } = useAuth();
+  const searchParams = useSearchParams();
+  const difficulty = searchParams.get('difficulty') || 'all';
   const [showDetailed, setShowDetailed] = useState(false);
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     // If no test state, redirect to home
     if (!testState) {
       window.location.href = '/';
+      return;
     }
-  }, [testState]);
+
+    // Save test result to Supabase if user is logged in
+    const saveResult = async () => {
+      if (user && testState && !saving) {
+        setSaving(true);
+        try {
+          await saveTestResult(testState, difficulty);
+        } catch (error) {
+          console.error('Error saving test result:', error);
+        } finally {
+          setSaving(false);
+        }
+      }
+    };
+
+    saveResult();
+  }, [testState, user, difficulty, saveTestResult, saving]);
 
   if (!testState) {
     return (
@@ -60,13 +86,15 @@ export default function ResultPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
-      <div className="container mx-auto px-4 py-8 max-w-2xl">
-        {/* Main Results Card */}
-        <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 text-center mb-6">
-          <div className="mb-8">
-            <div className="text-8xl mb-4">{performance.emoji}</div>
-            <h1 className={`text-4xl font-bold mb-2 ${performance.color}`}>
+    <>
+      <Header />
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
+        <div className="container mx-auto px-4 py-8 max-w-2xl">
+          {/* Main Results Card */}
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 text-center mb-6">
+            <div className="mb-8">
+              <div className="text-8xl mb-4">{performance.emoji}</div>
+              <h1 className={`text-4xl font-bold mb-2 ${performance.color}`}>
               {performance.message}
             </h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg">
@@ -92,6 +120,23 @@ export default function ResultPage() {
 
           {/* Action Buttons */}
           <div className="space-y-4">
+            {/* Saving indicator */}
+            {user && saving && (
+              <div className="bg-blue-50 dark:bg-blue-900 border border-blue-200 dark:border-blue-700 rounded-xl p-4 text-center">
+                <div className="flex items-center justify-center space-x-2">
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+                  <span className="text-blue-600 dark:text-blue-300">Saving your results...</span>
+                </div>
+              </div>
+            )}
+            
+            {/* Results saved confirmation */}
+            {user && !saving && (
+              <div className="bg-green-50 dark:bg-green-900 border border-green-200 dark:border-green-700 rounded-xl p-4 text-center">
+                <span className="text-green-600 dark:text-green-300">✅ Results saved to your profile!</span>
+              </div>
+            )}
+            
             <button
               onClick={handleRetakeTest}
               className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-xl text-xl transition-all duration-200 hover:scale-105"
@@ -105,6 +150,14 @@ export default function ResultPage() {
               >
                 Home
               </Link>
+              {user && (
+                <Link 
+                  href="/dashboard"
+                  className="flex-1 bg-green-200 hover:bg-green-300 dark:bg-green-800 dark:hover:bg-green-700 text-green-800 dark:text-green-200 font-semibold py-3 px-6 rounded-xl transition-colors text-center"
+                >
+                  Dashboard
+                </Link>
+              )}
               <button
                 onClick={() => setShowDetailed(!showDetailed)}
                 className="flex-1 bg-blue-200 hover:bg-blue-300 dark:bg-blue-800 dark:hover:bg-blue-700 text-blue-800 dark:text-blue-200 font-semibold py-3 px-6 rounded-xl transition-colors"
@@ -165,7 +218,7 @@ export default function ResultPage() {
                       )}
                       <div className="pt-2">
                         <span className="font-medium text-gray-600 dark:text-gray-400">Example: </span>
-                        <span className="text-gray-600 dark:text-gray-400 italic">"{word.example}"</span>
+                        <span className="text-gray-600 dark:text-gray-400 italic">&ldquo;{word.example}&rdquo;</span>
                       </div>
                     </div>
                   </div>
@@ -203,6 +256,25 @@ export default function ResultPage() {
           </div>
         )}
       </div>
-    </div>
+      </div>
+    </>
+  );
+}
+
+export default function ResultPage() {
+  return (
+    <Suspense fallback={
+      <>
+        <Header />
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900 flex items-center justify-center">
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+            <p className="text-gray-600 dark:text-gray-300 mt-4">Loading results...</p>
+          </div>
+        </div>
+      </>
+    }>
+      <ResultContent />
+    </Suspense>
   );
 }
