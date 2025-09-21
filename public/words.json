@@ -1,0 +1,926 @@
+[
+  {
+    "word": "Ubiquitous",
+    "meaning": "Present, appearing, or found everywhere",
+    "example": "Smartphones have become ubiquitous in modern society.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ephemeral",
+    "meaning": "Lasting for a very short time",
+    "example": "The beauty of cherry blossoms is ephemeral, lasting only a few weeks.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Perspicacious",
+    "meaning": "Having a ready insight into and understanding of things",
+    "example": "Her perspicacious analysis of the market trends impressed the board.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Obfuscate",
+    "meaning": "To make obscure, unclear, or unintelligible",
+    "example": "The politician tried to obfuscate the issue with complex jargon.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ameliorate",
+    "meaning": "To make something bad or unsatisfactory better",
+    "example": "The new policies were designed to ameliorate working conditions.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Sanguine",
+    "meaning": "Optimistic or positive, especially in a difficult situation",
+    "example": "Despite the setbacks, she remained sanguine about the project's success.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Recalcitrant",
+    "meaning": "Having an obstinately uncooperative attitude",
+    "example": "The recalcitrant student refused to follow the classroom rules.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Pernicious",
+    "meaning": "Having a harmful effect, especially in a gradual or subtle way",
+    "example": "The pernicious effects of smoking may not be apparent for years.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sagacious",
+    "meaning": "Having or showing keen mental discernment and good judgment",
+    "example": "The sagacious advisor helped the king make wise decisions.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Vituperate",
+    "meaning": "To blame or insult someone in strong or violent language",
+    "example": "The critic vituperated the director's latest film in his scathing review.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Quotidian",
+    "meaning": "Of or occurring every day; ordinary or commonplace",
+    "example": "She grew tired of the quotidian routine of office work.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Mendacious",
+    "meaning": "Given to or characterized by deception or falsehood",
+    "example": "The mendacious witness was caught lying under oath.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Loquacious",
+    "meaning": "Tending to talk a great deal; talkative",
+    "example": "The loquacious host kept the conversation flowing all evening.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Circumspect",
+    "meaning": "Wary and unwilling to take risks",
+    "example": "A circumspect approach to investing helped her avoid major losses.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Inscrutable",
+    "meaning": "Impossible to understand or interpret",
+    "example": "His inscrutable expression gave no hint of his true feelings.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Propitious",
+    "meaning": "Giving or indicating a good chance of success; favorable",
+    "example": "The sunny weather was propitious for their outdoor wedding.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Perfunctory",
+    "meaning": "Carried out with a minimum of effort or reflection",
+    "example": "His perfunctory apology lacked sincerity and conviction.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Magnanimous",
+    "meaning": "Very generous or forgiving, especially toward a rival or less powerful person",
+    "example": "The magnanimous winner congratulated his opponent graciously.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Supercilious",
+    "meaning": "Behaving as though one thinks oneself superior to others",
+    "example": "Her supercilious attitude alienated her colleagues at work.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Taciturn",
+    "meaning": "Reserved or uncommunicative in speech; saying little",
+    "example": "The taciturn librarian rarely engaged in conversation with patrons.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Vicarious",
+    "meaning": "Experienced in the imagination through the feelings or actions of another person",
+    "example": "She lived vicariously through her daughter's adventures abroad.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Garrulous",
+    "meaning": "Excessively talkative, especially on trivial matters",
+    "example": "The garrulous taxi driver chatted nonstop during the entire ride.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Egregious",
+    "meaning": "Outstandingly bad; shocking",
+    "example": "The restaurant's egregious service ruined our anniversary dinner.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Serendipity",
+    "meaning": "The occurrence of events by chance in a happy or beneficial way",
+    "example": "It was pure serendipity that led to their meeting at the coffee shop.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Fastidious",
+    "meaning": "Very attentive to accuracy and detail; hard to please",
+    "example": "The fastidious editor caught every minor error in the manuscript.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Evanescent",
+    "meaning": "Soon passing out of sight, memory, or existence; quickly fading",
+    "example": "The evanescent rainbow disappeared as quickly as it had appeared.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Laconic",
+    "meaning": "Using few words; expressing much in few words",
+    "example": "His laconic response of 'maybe' left everyone confused about his intentions.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Precarious",
+    "meaning": "Not securely held or in position; dependent on chance",
+    "example": "The company's precarious financial situation worried its investors.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Indomitable",
+    "meaning": "Impossible to subdue or defeat",
+    "example": "Her indomitable spirit helped her overcome every obstacle she faced.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Copious",
+    "meaning": "Abundant in supply or quantity",
+    "example": "The researcher took copious notes during the lengthy interview.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Gregarious",
+    "meaning": "Fond of the company of others; sociable",
+    "example": "His gregarious nature made him popular at social gatherings.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Palpable",
+    "meaning": "Able to be touched or felt; clear to the mind or plain to see",
+    "example": "The tension in the room was palpable during the heated debate.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Volatile",
+    "meaning": "Liable to change rapidly and unpredictably",
+    "example": "The stock market has been particularly volatile this quarter.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Tenacious",
+    "meaning": "Tending to keep a firm hold; persistent",
+    "example": "Her tenacious pursuit of justice never wavered despite the obstacles.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Benevolent",
+    "meaning": "Well meaning and kindly",
+    "example": "The benevolent donor contributed millions to the children's hospital.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Capricious",
+    "meaning": "Given to sudden and unaccountable changes of mood or behavior",
+    "example": "The capricious weather made it difficult to plan outdoor activities.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dogmatic",
+    "meaning": "Inclined to lay down principles as incontrovertibly true",
+    "example": "His dogmatic approach to teaching left no room for student discussion.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ephemeral",
+    "meaning": "Lasting for a very short time",
+    "example": "Social media trends are often ephemeral, lasting only days or weeks.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Facetious",
+    "meaning": "Treating serious issues with deliberately inappropriate humor",
+    "example": "His facetious comments during the memorial service were highly inappropriate.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ingenuous",
+    "meaning": "Innocent and unsuspecting",
+    "example": "Her ingenuous trust in strangers sometimes put her in dangerous situations.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Negligible",
+    "meaning": "So small or unimportant as to be not worth considering",
+    "example": "The side effects of the medication were negligible for most patients.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Ostentatious",
+    "meaning": "Characterized by vulgar or pretentious display",
+    "example": "The ostentatious mansion was designed more to impress than to comfort.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Pedantic",
+    "meaning": "Excessively concerned with minor details or rules",
+    "example": "The pedantic professor corrected every small grammatical error in the essays.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Querulous",
+    "meaning": "Complaining in a petulant or whining manner",
+    "example": "The querulous customer demanded to speak to the manager about every minor issue.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Reticent",
+    "meaning": "Not revealing one's thoughts or feelings readily",
+    "example": "The reticent witness was reluctant to share details about what she had seen.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Succinct",
+    "meaning": "Briefly and clearly expressed",
+    "example": "His succinct presentation covered all the key points in just ten minutes.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Truculent",
+    "meaning": "Eager or quick to argue or fight; aggressively defiant",
+    "example": "The truculent teenager refused to follow any of his parents' rules.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Vindictive",
+    "meaning": "Having or showing a strong desire for revenge",
+    "example": "Her vindictive nature made it impossible for her to forgive past wrongs.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Whimsical",
+    "meaning": "Playfully quaint or fanciful, especially in an appealing way",
+    "example": "The whimsical garden was filled with colorful sculptures and unusual plants.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Zealous",
+    "meaning": "Having or showing great energy or enthusiasm in pursuit of a cause",
+    "example": "The zealous activist campaigned tirelessly for environmental protection.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Aberrant",
+    "meaning": "Departing from an accepted standard",
+    "example": "The scientist was concerned about the aberrant results from the experiment.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Bucolic",
+    "meaning": "Relating to rural life; pastoral",
+    "example": "They escaped the city for a bucolic weekend at their country cottage.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Cogent",
+    "meaning": "Clear, logical, and convincing",
+    "example": "She presented a cogent argument for increasing the education budget.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Deleterious",
+    "meaning": "Causing harm or damage",
+    "example": "The deleterious effects of pollution on marine life are well documented.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Equivocal",
+    "meaning": "Open to more than one interpretation; ambiguous",
+    "example": "His equivocal response left everyone unsure of his true position on the issue.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Felicitous",
+    "meaning": "Well chosen or suited to the circumstances",
+    "example": "Her felicitous choice of words helped diffuse the tense situation.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Gratuitous",
+    "meaning": "Uncalled for; lacking good reason; given freely",
+    "example": "The movie was criticized for its gratuitous violence and profanity.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Hackneyed",
+    "meaning": "Lacking significance through having been overused",
+    "example": "The writer avoided hackneyed phrases in favor of original expressions.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Indefatigable",
+    "meaning": "Persisting tirelessly",
+    "example": "The indefatigable researcher worked sixteen-hour days to complete the study.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Jocular",
+    "meaning": "Fond of or characterized by joking; humorous",
+    "example": "His jocular personality made him the life of every party he attended.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Kinetic",
+    "meaning": "Relating to or resulting from motion",
+    "example": "The kinetic sculpture moved gracefully in the gentle breeze.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Lugubrious",
+    "meaning": "Looking or sounding sad and dismal",
+    "example": "The lugubrious music perfectly matched the somber mood of the funeral.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Mellifluous",
+    "meaning": "Sweet or musical; pleasant to hear",
+    "example": "The opera singer's mellifluous voice captivated the entire audience.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Nefarious",
+    "meaning": "Extremely wicked or villainous",
+    "example": "The detective uncovered the criminal's nefarious plot to rob the bank.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Opulent",
+    "meaning": "Extremely rich, luxurious, or lavish",
+    "example": "The opulent ballroom was decorated with crystal chandeliers and gold fixtures.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Pellucid",
+    "meaning": "Transparently clear; easily understood",
+    "example": "Her pellucid explanation made the complex theory accessible to everyone.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Quixotic",
+    "meaning": "Extremely idealistic; unrealistic and impractical",
+    "example": "His quixotic plan to solve world hunger in one year was admirable but impossible.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Redolent",
+    "meaning": "Strongly reminiscent or suggestive of something",
+    "example": "The old house was redolent of memories from her childhood summers.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Salacious",
+    "meaning": "Having an excessive interest in sexual matters",
+    "example": "The tabloid was known for its salacious gossip about celebrities.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Turgid",
+    "meaning": "Swollen and distended; pompous or bombastic in style",
+    "example": "The professor's turgid prose made his brilliant ideas nearly incomprehensible.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Umbrage",
+    "meaning": "Offense or annoyance",
+    "example": "She took umbrage at his suggestion that her work was inadequate.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Vacuous",
+    "meaning": "Having or showing a lack of thought or intelligence",
+    "example": "The politician's vacuous responses avoided answering any real questions.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Winsome",
+    "meaning": "Attractive or appealing in appearance or character",
+    "example": "Her winsome smile and friendly demeanor made her popular with customers.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Xenophobic",
+    "meaning": "Having or showing dislike or prejudice against people from other countries",
+    "example": "The xenophobic policies created tension between different ethnic communities.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Yearning",
+    "meaning": "A feeling of intense longing for something",
+    "example": "She felt a deep yearning to return to her homeland after years abroad.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Zephyr",
+    "meaning": "A gentle mild breeze",
+    "example": "A warm zephyr carried the scent of blooming flowers across the garden.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Acumen",
+    "meaning": "The ability to make good judgments and quick decisions",
+    "example": "Her business acumen helped the company navigate through difficult times.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Brevity",
+    "meaning": "Concise and exact use of words in writing or speech",
+    "example": "The brevity of his speech made every word count and kept the audience engaged.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Cacophony",
+    "meaning": "A harsh, discordant mixture of sounds",
+    "example": "The construction site created a cacophony of drilling, hammering, and shouting.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Dearth",
+    "meaning": "A scarcity or lack of something",
+    "example": "The dearth of qualified candidates made filling the position extremely difficult.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ephemeral",
+    "meaning": "Lasting for a very short time",
+    "example": "The ephemeral nature of internet fame means today's viral star is tomorrow's forgotten memory.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Fortuitous",
+    "meaning": "Happening by accident or chance rather than design",
+    "example": "Their fortuitous meeting at the airport led to a successful business partnership.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Gossamer",
+    "meaning": "A fine, filmy substance; something delicate or insubstantial",
+    "example": "The gossamer threads of the spider's web glistened with morning dew.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Harbinger",
+    "meaning": "A person or thing that announces or signals the approach of another",
+    "example": "The first robin is often considered a harbinger of spring.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Immutable",
+    "meaning": "Unchanging over time or unable to be changed",
+    "example": "The laws of physics are considered immutable truths of the universe.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Juxtapose",
+    "meaning": "To place or deal with close together for contrasting effect",
+    "example": "The artist chose to juxtapose modern and classical elements in her sculpture.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Kindle",
+    "meaning": "To light or set on fire; to arouse or inspire",
+    "example": "The inspiring speech helped kindle a passion for social justice in young minds.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Luminous",
+    "meaning": "Full of light; bright or shining",
+    "example": "The luminous full moon cast a silver glow across the peaceful lake.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Myriad",
+    "meaning": "A countless or extremely great number",
+    "example": "The garden was home to a myriad of colorful butterflies and busy bees.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Nascent",
+    "meaning": "Just coming into existence and beginning to display signs of future potential",
+    "example": "The nascent technology showed promise but needed years of development.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Opalescent",
+    "meaning": "Showing luminous colors that seem to change from different angles",
+    "example": "The opalescent soap bubbles shimmered with rainbow colors in the sunlight.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Paradigm",
+    "meaning": "A typical example or pattern of something; a model",
+    "example": "The new teaching method represented a paradigm shift in educational philosophy.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Quintessential",
+    "meaning": "Representing the most perfect example of a quality or class",
+    "example": "The small café was the quintessential neighborhood gathering place.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Resilient",
+    "meaning": "Able to withstand or recover quickly from difficult conditions",
+    "example": "The resilient community rebuilt stronger after the devastating hurricane.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Scintillating",
+    "meaning": "Sparkling or shining brightly; brilliantly and excitingly clever",
+    "example": "Her scintillating conversation kept everyone entertained throughout dinner.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Tangible",
+    "meaning": "Perceptible by touch; clear and definite; real",
+    "example": "The new training program produced tangible improvements in employee performance.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Ubiquitous",
+    "meaning": "Present, appearing, or found everywhere",
+    "example": "Coffee shops have become ubiquitous fixtures in urban neighborhoods worldwide.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Venerable",
+    "meaning": "Accorded great respect, especially because of age, wisdom, or character",
+    "example": "The venerable professor had taught at the university for over forty years.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Wistful",
+    "meaning": "Having or showing a feeling of vague or regretful longing",
+    "example": "She cast a wistful glance at the childhood home she was leaving forever.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Xenial",
+    "meaning": "Of or relating to hospitality; friendly relations between hosts and guests",
+    "example": "The xenial customs of the village made every visitor feel welcome and valued.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Yielding",
+    "meaning": "Giving way under pressure; flexible and accommodating",
+    "example": "Her yielding nature sometimes prevented her from standing up for her own needs.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Zealot",
+    "meaning": "A person who is fanatical and uncompromising in pursuit of ideals",
+    "example": "The environmental zealot refused to use any products that harmed the planet.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Abstruse",
+    "meaning": "Difficult to understand; obscure",
+    "example": "The philosopher's abstruse theories were challenging even for advanced students.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Beguile",
+    "meaning": "To charm or enchant someone, often in a deceptive way",
+    "example": "The con artist used his charm to beguile unsuspecting victims out of their money.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Conundrum",
+    "meaning": "A confusing and difficult problem or question",
+    "example": "How to reduce pollution while maintaining economic growth remains a conundrum.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Didactic",
+    "meaning": "Intended to teach; having moral instruction as an ulterior motive",
+    "example": "The didactic children's book taught valuable lessons about kindness and sharing.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Efficacious",
+    "meaning": "Successful in producing a desired or intended result; effective",
+    "example": "The new medication proved to be efficacious in treating the rare disease.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Furtive",
+    "meaning": "Attempting to avoid notice or attention; secretive",
+    "example": "She cast a furtive glance around the room before slipping the document into her bag.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Germane",
+    "meaning": "Relevant to a subject under consideration",
+    "example": "His comments about budget constraints were germane to the discussion about the project.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Hegemony",
+    "meaning": "Leadership or dominance, especially by one country or social group",
+    "example": "The tech company's hegemony in the smartphone market seemed unshakeable.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ineffable",
+    "meaning": "Too great or extreme to be expressed or described in words",
+    "example": "The ineffable beauty of the sunset left the hikers speechless with wonder.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Judicious",
+    "meaning": "Having, showing, or done with good judgment or sense",
+    "example": "Her judicious use of resources ensured the project stayed within budget.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Keenly",
+    "meaning": "In an intense or eager way; with sharp perception",
+    "example": "The detective keenly observed every detail of the crime scene for clues.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Languid",
+    "meaning": "Lacking in vigor or vitality; relaxed and unhurried",
+    "example": "The languid summer afternoon was perfect for reading in the hammock.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Magnanimous",
+    "meaning": "Very generous or forgiving, especially toward a rival",
+    "example": "The magnanimous gesture of donating to his opponent's charity surprised everyone.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Nostalgia",
+    "meaning": "A sentimental longing for the past",
+    "example": "Looking through old photo albums filled her with nostalgia for her college years.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Ornate",
+    "meaning": "Elaborately or highly decorated",
+    "example": "The ornate ceiling of the cathedral featured intricate gold and blue patterns.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Panacea",
+    "meaning": "A solution or remedy for all difficulties or diseases",
+    "example": "Despite promises, there is no panacea for the complex problems facing education.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Quell",
+    "meaning": "To put an end to something, typically by force",
+    "example": "The security forces were called in to quell the riots in the city center.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Raconteur",
+    "meaning": "A person who tells anecdotes in a skillful and amusing way",
+    "example": "The dinner party guest was a gifted raconteur who entertained everyone with stories.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Stalwart",
+    "meaning": "Loyal, committed, and hardworking",
+    "example": "She was a stalwart supporter of the charity, volunteering every weekend for years.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Torpid",
+    "meaning": "Mentally or physically inactive; lethargic",
+    "example": "The torpid students struggled to focus during the long afternoon lecture.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Unassailable",
+    "meaning": "Unable to be attacked, questioned, or defeated",
+    "example": "Her reputation for honesty and integrity was unassailable throughout her career.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Vivacious",
+    "meaning": "Attractively lively and animated",
+    "example": "Her vivacious personality made her a natural choice for the television hosting job.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Wary",
+    "meaning": "Feeling or showing caution about possible dangers or problems",
+    "example": "Investors have become wary of putting money into unstable markets.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Xenophile",
+    "meaning": "A person who is attracted to foreign peoples, cultures, or customs",
+    "example": "As a xenophile, she loved traveling and learning about different cultures worldwide.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Yoke",
+    "meaning": "A wooden crosspiece fastened over necks of animals; something that connects",
+    "example": "The farmers used a yoke to harness the oxen together for plowing the field.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Zestful",
+    "meaning": "Characterized by great enthusiasm and energy",
+    "example": "Her zestful approach to teaching inspired even the most reluctant students to participate.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Alacrity",
+    "meaning": "Brisk and cheerful readiness",
+    "example": "She accepted the challenging assignment with alacrity, eager to prove her abilities.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Bellicose",
+    "meaning": "Demonstrating aggression and willingness to fight",
+    "example": "The bellicose rhetoric from both sides threatened to escalate the diplomatic crisis.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Clemency",
+    "meaning": "Mercy; lenient treatment",
+    "example": "The judge showed clemency and reduced the sentence due to the defendant's cooperation.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Duplicity",
+    "meaning": "Deceitfulness; double-dealing",
+    "example": "His duplicity was revealed when his secret business dealings came to light.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Ebullient",
+    "meaning": "Cheerful and full of energy",
+    "example": "The team's ebullient celebration continued long after their championship victory.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Fractious",
+    "meaning": "Irritable and quarrelsome",
+    "example": "The fractious board meeting ended without any agreements being reached.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Gaunt",
+    "meaning": "Lean and haggard, especially from hunger, age, or suffering",
+    "example": "The gaunt survivor emerged from the wilderness after weeks without proper food.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Hapless",
+    "meaning": "Unfortunate; having no luck",
+    "example": "The hapless tourist got lost three times in one day despite having a map.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Incisive",
+    "meaning": "Accurately analytical; clear-cut and direct",
+    "example": "Her incisive commentary cut through the confusion and clarified the main issues.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Jaunty",
+    "meaning": "Having a lively, cheerful, and self-confident manner",
+    "example": "He walked with a jaunty step, whistling a tune and tipping his hat to passersby.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Kindle",
+    "meaning": "To light a fire; to arouse or inspire",
+    "example": "The teacher's passion for literature helped kindle a love of reading in her students.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Lachrymose",
+    "meaning": "Tearful or given to weeping",
+    "example": "The lachrymose performance moved the entire audience to tears.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Malleable",
+    "meaning": "Easily influenced; pliable",
+    "example": "Young minds are often more malleable and open to new ideas and perspectives.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Nadir",
+    "meaning": "The lowest point in the fortunes of a person or organization",
+    "example": "The company reached its nadir during the economic recession but has since recovered.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Oblique",
+    "meaning": "Neither perpendicular nor parallel; indirect",
+    "example": "His oblique reference to her past mistakes made everyone uncomfortable.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Pecuniary",
+    "meaning": "Relating to or consisting of money",
+    "example": "The scholarship provided pecuniary assistance to students from low-income families.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Quiescent",
+    "meaning": "In a state of inactivity or dormancy",
+    "example": "The volcano has remained quiescent for over a century but could become active again.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Ribald",
+    "meaning": "Referring to sexual matters in an amusingly rude way",
+    "example": "The comedian's ribald humor was popular with adult audiences but inappropriate for children.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Sardonic",
+    "meaning": "Grimly mocking or cynical",
+    "example": "His sardonic smile suggested he found the whole situation absurdly amusing.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Temerity",
+    "meaning": "Excessive confidence or boldness; audacity",
+    "example": "She had the temerity to criticize her boss's decision in front of the entire team.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Urbane",
+    "meaning": "Courteous and refined in manner",
+    "example": "The urbane diplomat handled the delicate negotiations with skill and grace.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Vapid",
+    "meaning": "Offering nothing that is stimulating or challenging; bland",
+    "example": "The vapid conversation at the party made her wish she had stayed home.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Wayward",
+    "meaning": "Difficult to control or predict because of unusual behavior",
+    "example": "The wayward child refused to follow any rules despite repeated warnings.",
+    "difficulty": "medium"
+  },
+  {
+    "word": "Xerophyte",
+    "meaning": "A plant that has adapted to survive in an environment with little water",
+    "example": "Cacti are xerophytes that can store water in their thick, fleshy stems.",
+    "difficulty": "hard"
+  },
+  {
+    "word": "Yawning",
+    "meaning": "Wide open; showing a gap",
+    "example": "There was a yawning chasm between the two sides of the political debate.",
+    "difficulty": "easy"
+  },
+  {
+    "word": "Zenith",
+    "meaning": "The highest point reached by a celestial body; the peak",
+    "example": "Her career reached its zenith when she won the Nobel Prize for Literature.",
+    "difficulty": "medium"
+  }
+]
